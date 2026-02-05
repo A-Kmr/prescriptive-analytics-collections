@@ -14,23 +14,22 @@ This project implements a **Prescriptive Analytics Engine** that optimizes resou
 ---
 ## 📁 Project Structure
 
-\`\`\`
+```bash
 collections-optimization/
 ├── data/
-│   ├── generate_data.py      # Synthetic dataset generation
-│   └── invoices.csv           # Generated invoice data (10k records)
+│   ├── generate_data.py    # Synthetic dataset generation
+│   └── invoices.csv        # Generated invoice data (10k records)
 ├── models/
-│   ├── train_model.py         # PD/LGD model training
-│   ├── rf_model.pkl           # Saved Random Forest model
-│   └── lgd_model.pkl          # Saved LGD model
+│   ├── train_model.py      # PD/LGD model training
+│   ├── rf_model.pkl        # Saved Random Forest model
+│   └── lgd_model.pkl       # Saved LGD model
 ├── optimization/
-│   └── optimize.py            # Linear Programming solver
+│   └── optimize.py         # Linear Programming solver
 ├── results/
-│   └── strategy_comparison.png # Visualization outputs
-├── app.py                     # Streamlit dashboard
-├── requirements.txt           # Python dependencies
-└── README.md                  # This file
-\`\`\`
+│   └── strategy_comparison.png  # Visualization outputs
+├── app.py                  # Streamlit dashboard
+├── requirements.txt        # Python dependencies
+└── README.md               # This file
 
 ---
 
