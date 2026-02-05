@@ -12,6 +12,27 @@ In financial collections, call center capacity is a hard constraint (e.g., 50 ca
 This project implements a **Prescriptive Analytics Engine** that optimizes resource allocation. By combining **Credit Risk Modeling** (PD/LGD/EAD framework) with **Mathematical Optimization** (Linear Programming), the model identifies the specific set of accounts that maximizes **Expected Recovery** under strict capacity constraints.
 
 ---
+## 📁 Project Structure
+
+\`\`\`
+collections-optimization/
+├── data/
+│   ├── generate_data.py      # Synthetic dataset generation
+│   └── invoices.csv           # Generated invoice data (10k records)
+├── models/
+│   ├── train_model.py         # PD/LGD model training
+│   ├── rf_model.pkl           # Saved Random Forest model
+│   └── lgd_model.pkl          # Saved LGD model
+├── optimization/
+│   └── optimize.py            # Linear Programming solver
+├── results/
+│   └── strategy_comparison.png # Visualization outputs
+├── app.py                     # Streamlit dashboard
+├── requirements.txt           # Python dependencies
+└── README.md                  # This file
+\`\`\`
+
+---
 
 ## 📊 Key Results
 
@@ -49,6 +70,7 @@ The scatter plot below reveals exactly *why* the optimization engine outperforms
 
 <img width="405" height="263" alt="image" src="https://github.com/user-attachments/assets/f0077663-3732-449c-8384-03e174a8d9fb" />
 
+*Figure 1: Optimization engine (green) identifies high-value accounts that naive risk-based sorting (red) misses*
 **What this shows:**
 * **X-axis:** Probability of Default (Risk).
 * **Y-axis:** Outstanding Balance (Value).
@@ -101,3 +123,87 @@ Start the interactive web app:
 ```bash
 streamlit run app.py
 ```
+
+## 💼 Real-World Applications
+
+This optimization framework generalizes to any scenario with:
+1. ✅ Limited Resources (call center capacity, sales rep bandwidth)
+2. ✅ Uncertain Outcomes (will customer pay? will lead convert?)
+3. ✅ Variable Payoffs (different account values)
+
+**Industry Use Cases:**
+- **Collections & Recovery:** Credit card delinquency, loan workouts, 
+  medical debt collections
+- **Customer Retention:** Churn prevention campaigns, win-back offers, 
+  targeted retention
+- **Sales Optimization:** Lead prioritization under quota constraints, 
+  territory assignment
+- **Healthcare:** Patient outreach for preventive care under limited 
+  clinical hours
+
+**Key Insight:** Traditional strategies optimize for risk alone. 
+This engine optimizes for expected business value under real-world 
+constraints.
+
+---
+
+## ⚠️ Limitations & Future Work
+
+**Current Scope:**
+- Synthetic dataset (real-world validation pending)
+- Fixed LGD assumption (60% for all accounts)
+- Static intervention effect (30% success rate)
+- Single-period optimization (today only, not multi-day)
+
+**Future Enhancements:**
+1. **Dynamic LGD Modeling:** Segment-specific recovery rates 
+   (enterprise vs. SME vs. individual)
+2. **Multi-Period Optimization:** Optimize over next 7-30 days 
+   with contact frequency constraints
+3. **Fairness Constraints:** Ensure demographic/geographic balance 
+   in outreach
+4. **A/B Testing Framework:** Real-world validation of intervention 
+   effects
+5. **Reinforcement Learning:** Learn optimal intervention timing 
+   from historical outcomes
+6. **Production API:** REST endpoint for real-time scoring and 
+   prioritization
+
+---
+
+## 📚 Technical Stack
+
+**Data & Modeling:**
+- Python 3.9+
+- Scikit-learn (Random Forest, Isotonic Regression)
+- XGBoost (Gradient Boosting)
+- Pandas, NumPy (Data manipulation)
+
+**Optimization:**
+- PuLP (Linear Programming interface)
+- CBC Solver (Open-source LP solver)
+
+**Visualization & Deployment:**
+- Streamlit (Interactive dashboard)
+- Matplotlib, Seaborn (Charts)
+
+## 📄 License
+
+This project is for educational and portfolio purposes.
+
+---
+
+## 📧 Contact
+
+**Anirudh Kumar Pentapati**
+- LinkedIn: [linkedin.com/in/anirudhkumar98](https://linkedin.com/in/anirudhkumar98)
+- Email: anirudhkumarpentapati@gmail.com
+- Location: Hyderabad, India
+
+*Open to opportunities in Data Science, Risk Analytics, and Operations Research roles.*
+
+---
+
+**Development:**
+- Git (Version control)
+- Jupyter (Exploratory analysis)
