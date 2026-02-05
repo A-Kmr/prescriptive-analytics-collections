@@ -71,6 +71,7 @@ The scatter plot below reveals exactly *why* the optimization engine outperforms
 <img width="405" height="263" alt="image" src="https://github.com/user-attachments/assets/f0077663-3732-449c-8384-03e174a8d9fb" />
 
 *Figure 1: Optimization engine (green) identifies high-value accounts that naive risk-based sorting (red) misses*
+
 **What this shows:**
 * **X-axis:** Probability of Default (Risk).
 * **Y-axis:** Outstanding Balance (Value).
