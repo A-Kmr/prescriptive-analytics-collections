@@ -64,36 +64,28 @@ Built a **Streamlit** application to allow stakeholders to simulate different sc
 ### Prerequisites
 ```bash
 pip install -r requirements.txt
-##1. Generate Data
+```
+
+### 1. Generate Data
 Create the synthetic dataset:
-
-Bash
-python generate_data.py
-##2. Train Models
-Train the Risk (PD) and Severity (LGD) models:
-
-Bash
-python train_model.py
-##3. Run Optimization
-Execute the Linear Programming solver to see the results in your terminal:
-
-Bash
-python optimize.py
-##4. Launch Dashboard
-Start the interactive web app:
-
-Bash
-streamlit run app.py
-##📁 Repository Structure
-src/: Source code for models and solvers.
-
-data/: Generated datasets (collections_data.csv, modeled_data.csv).
-
-app.py: Streamlit dashboard entry point.
-
-optimize.py: Standalone optimization script.
-
-generate_data.py: Synthetic data generation script.
-### Prerequisites
 ```bash
-pip install -r requirements.txt
+python generate_data.py
+```
+
+### 2. Train Models
+Train the Risk (PD) and Severity (LGD) models:
+```bash
+python train_model.py
+```
+
+### 3. Run Optimization
+Execute the Linear Programming solver to see the results in your terminal:
+```bash
+python optimize.py
+```
+
+### 4. Launch Dashboard
+Start the interactive web app:
+```bash
+streamlit run app.py
+```
