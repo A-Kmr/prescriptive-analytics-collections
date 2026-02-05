@@ -30,7 +30,7 @@ collections-optimization/
 ├── app.py                  # Streamlit dashboard
 ├── requirements.txt        # Python dependencies
 └── README.md               # This file
-
+```
 ---
 
 ## 📊 Key Results
