@@ -28,8 +28,8 @@ The scatter plot below reveals *why* the AI wins.
 * **Red Dots (Naive Strategy):** Cluster on the far right (High Risk), often ignoring the balance size.
 * **Green X's (AI Strategy):** Identify **"Whales"**—accounts with moderate risk but high outstanding balances—that the Naive strategy missed.
 
-![Strategy Comparison](images/scatter_plot.png)
-*(X-Axis: Probability of Default | Y-Axis: Outstanding Amount)*
+<img width="405" height="263" alt="image" src="https://github.com/user-attachments/assets/f0077663-3732-449c-8384-03e174a8d9fb" />
+
 
 ---
 
@@ -54,8 +54,6 @@ Since real-world collections data is sensitive, I generated a synthetic dataset 
 
 ### 4. Interactive Dashboard (`app.py`)
 Built a **Streamlit** application to allow stakeholders to simulate different scenarios (e.g., changing call capacity or intervention success rates) and instantly see the financial impact.
-
-<img width="405" height="263" alt="image" src="https://github.com/user-attachments/assets/9bb8f7d8-4255-4c3f-b097-35d8a5411bfd" />
 
 
 
