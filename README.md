@@ -24,7 +24,7 @@ collections-optimization/
 ├── modeled_data.csv    # Data with predicted risk scores
 ├── requirements.txt    # Python dependencies
 ├── README.md           # This file
-└── strategy_comparison.png  # Visualization outputs
+└── strategy_comparison.png  # Visualization output
 ```
 ---
 
