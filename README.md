@@ -55,7 +55,8 @@ Since real-world collections data is sensitive, I generated a synthetic dataset 
 ### 4. Interactive Dashboard (`app.py`)
 Built a **Streamlit** application to allow stakeholders to simulate different scenarios (e.g., changing call capacity or intervention success rates) and instantly see the financial impact.
 
-![Dashboard Preview](images/dashboard.png)
+<img width="1200" height="800" alt="strategy_comparison" src="https://github.com/user-attachments/assets/63ffc361-6897-4588-b680-315af8d1c407" />
+
 
 ---
 
