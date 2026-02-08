@@ -56,7 +56,7 @@ df.loc[top_risk_indices, 'selected_naive_risk'] = 1
 
 # Calculate Total Value for each strategy
 value_optimized = df[df['selected_optimized'] == 1]['value_of_call'].sum()
-value_random = df[df['selected_random'] == 1]['value_of_call'].sum()
+value_random = df[df['selected_random'] == 1]['value_of_call'].sum() 
 value_naive = df[df['selected_naive_risk'] == 1]['value_of_call'].sum()
 
 print("\n--- RESULTS (Money Saved per Day) ---")
