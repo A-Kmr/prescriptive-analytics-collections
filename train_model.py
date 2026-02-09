@@ -63,3 +63,13 @@ df['pred_lgd'] = lgd_model.predict(X)
 # Save to a new CSV for the next step
 df.to_csv('modeled_data.csv', index=False)
 print("Success! Models trained and 'modeled_data.csv' saved.")
+
+# Load your modeled data
+df = pd.read_csv('modeled_data.csv')
+
+# Calculate metrics
+roc = roc_auc_score(df['default_flag'], df['pred_pd'])
+brier = brier_score_loss(df['default_flag'], df['pred_pd'])
+
+print(f"ROC-AUC: {roc:.3f}")
+print(f"Brier Score: {brier:.3f}")
